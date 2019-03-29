@@ -1,0 +1,1 @@
+asus_power_fail
