@@ -13,12 +13,12 @@ export XAUTHORITY=/home/"$USER"/.Xauthority
 #notify-send -u critical "Power Failure ... Shutting down the system in less than 1 min!"	#Cant get this to work for some reason?
 
 #Send a warning notification to X-dsiplay
-zenity --warning --title "Power Failure" --text "Shutdown in 1min. Please save all your work" --timeout=45 2>/dev/null &	
+zenity --warning --title "Power Failure" --text "Shutdown in 1 min. Please save all your work" --timeout=45 2>/dev/null &	
 
 echo "Power Failure at $(date)" >>/home/"$USER"/scripts.log
 sleep 45s
 
-zenity --warning --title "Power Failure" --text "Shutdown in 15s!" & --timeout=14 2>/dev/null
+zenity --warning --title "Power Failure" --text "Shutdown in 15 seconds!" & --timeout=14 2>/dev/null
 sleep 15s
 
 systemctl poweroff -i

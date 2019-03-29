@@ -1,6 +1,6 @@
 A script that will will shutdown a ASUS G551JW laptop safely on power failure or loss of AC power. Only tested on a ASUS laptop
 
-I created this because even though Linux has the built in function to shutdown the laptop when the power fails, in power options. The problem is that when my batery dies before it even notifies Linux that it is critical. This is because the battery is worn out. 
+I created this because even though Linux has the built in function to shutdown the laptop when the power fails, in power options. The problem is that my batery dies before it even get a chance to notify Linux that it is critical. This is because the battery is worn out. 
 With this, I am able to log power failures and also shutdown my pc safely even with a mostly dead battery.
 
 It is used in conjunction with 80-power.rules located in /etc/udev/rules.d/ and power_fail.sh that you put in /home/user/bin.
