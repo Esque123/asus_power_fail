@@ -1,5 +1,6 @@
 #!/bin/bash
 # A script that will will shutdown the laptop safely on power failure. Only tested on a ASUS laptop
+# Place this script in /home/user/bin
 # It is used in conjunction with 80-power.rules located in /etc/udev/rules.d/ 
 # Kevin
 # 23/03/2019
