@@ -1,0 +1,12 @@
+# Rule that runs a specidied script when the latpop loses AC power
+#Place this file in /etc/udev/rules.d/
+#OTHER USEFULL STUFF!
+	# Use "udevadm monitor" to id the event and action
+	# Use "sudo udevadm control --reload" to refresh udev
+	# Use "sudo udevadm info --path=/sys/class/power_supply/BAT0" to ID Battery ENV
+	# Use "sudo udevadm info --path=/sys/class/power_supply/AC0" to ID the AC ENV
+	# Use "udevadm test --action="change" /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A08:00/PNP0C0A:00/power_supply/BAT0" to run a simulation.
+# Kevin Mostert
+# 23/03/2019
+
+SUBSYSTEM=="power_supply", ACTION=="change", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="/bin/bash /usr/local/bin/power_fail.sh"
